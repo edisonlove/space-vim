@@ -64,8 +64,8 @@ scriptencoding utf-8
 " nerdtree {
     let g:NERDTreeShowHidden=1
     let g:NERDTreeAutoDeleteBuffer=1
-    let g:NERDTreeDirArrowExpandable = '►'
-    let g:NERDTreeDirArrowCollapsible = '▼'
+    let g:NERDTreeDirArrowExpandable = '+'
+    let g:NERDTreeDirArrowCollapsible = '-'
     let g:NERDTreeIgnore=[
                 \ '\.py[cd]$', '\~$', '\.swo$', '\.swp$',
                 \ '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$',
@@ -76,14 +76,14 @@ scriptencoding utf-8
 
 " nerdtree-git-plugin {
     let g:NERDTreeIndicatorMapCustom = {
-                \ 'Modified'  : '✹',
-                \ 'Staged'    : '✚',
-                \ 'Untracked' : '✭',
-                \ 'Renamed'   : '➜',
-                \ 'Unmerged'  : '═',
-                \ 'Deleted'   : '✖',
-                \ 'Dirty'     : '✗',
-                \ 'Clean'     : '✓',
+                \ 'Modified'  : 'm',
+                \ 'Staged'    : 's',
+                \ 'Untracked' : '-t',
+                \ 'Renamed'   : 'r',
+                \ 'Unmerged'  : '-m',
+                \ 'Deleted'   : 'x',
+                \ 'Dirty'     : 'd',
+                \ 'Clean'     : 'c',
                 \ 'Unknown'   : '?'
                 \ }
 " }

@@ -8,7 +8,7 @@ if g:spacevim_nvim
     " Use smartcase.
     let g:deoplete#enable_smart_case = 1
     " Set minimum syntax keyword length.
-    let g:deoplete#sources#syntax#min_keyword_length = 3
+    let g:deoplete#sources#syntax#min_keyword_length = 1
 
    " Define dictionary.
     let g:deoplete#sources#dictionary#dictionaries = {
