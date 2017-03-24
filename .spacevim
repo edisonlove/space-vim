@@ -15,6 +15,7 @@
 	Layer 'git'
 	Layer 'programming'
 	Layer 'text-align'
+	Layer 'fzf'
 endfunction
 
 function! UserInit()
@@ -38,12 +39,54 @@ Plug 'Shougo/neocomplete.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 " cpp/h快速切换
 Plug 'derekwyatt/vim-fswitch'
+" surround
+Plug 'tpope/vim-surround'
 endfunction
 
 function! UserConfig()
 let mapleader="\<Space>"
+nnoremap Q :qa!<CR>
+nnoremap E :e!<CR>
+
+noremap <C-A> gggH<C-O>G  
+inoremap <C-A> <C-O>gg<C-O>gH<C-O>G  
+cnoremap <C-A> <C-C>gggH<C-O>G  
+onoremap <C-A> <C-C>gggH<C-O>G  
+snoremap <C-A> <C-C>gggH<C-O>G  
+xnoremap <C-A> <C-C>ggVG  
+vnoremap <C-c> "+y
+map <C-v> "+gP
+vnoremap <C-x> "+x
+noremap <C-s> :update<CR>  
+vnoremap <C-s> <C-C>:update<CR>  
+inoremap <C-s> <C-O>:update<CR>  
+
+unmap ;
+
+
+" 快速替换当前单词
+nnoremap <Leader>p viwp
+
+" 开启实时搜索功能
+set incsearch
+
+" 搜索时大小写不敏感
+set ignorecase
+
+" 关闭兼容模式
+set nocompatible
+
+" vim 自身命令行模式智能补全
+set wildmenu
+
+" vim 默认使用系统剪切板
+set clipboard=unnamed
+
+" 高亮显示搜索结果
+set hlsearch
 
 " 配色方案
+colorscheme solarized 
 let g:airline_powerline_fonts=1
 set guifont=Consolas\ for\ Powerline\ FixedD:h13
 
